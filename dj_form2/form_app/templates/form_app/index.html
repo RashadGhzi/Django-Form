@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <table>
+        {% comment %} render form fields maually {% endcomment %}
+        {{form.subject.id_for_label}}
+        <div>
+            <label for="{{form.subject.id_for_label}}">Subject </label>
+            {{form.subject}}
+        </div>
+        <div>
+            {{form.subject.label_tag}}
+            {{form.subject}}
+        </div>
+        <div>
+            {{form.subject.label}} <br>
+            {{form.subject.value}} <br>
+            {{form.subject.html_name}} <br>
+            {{form.subject.help_text}} <br>
+            {{form.subject.field.required}} <br>
+        </div>
+    </table>
+</body>
+</html>
